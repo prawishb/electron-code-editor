@@ -35,6 +35,8 @@ const createWindow = async () => {
     },
   });
 
+  mainWindow.removeMenu();
+
   /**
    * If you install `show: true` then it can cause issues when trying to close the window.
    * Use `show: false` and listener events `ready-to-show` to fix these issues.
@@ -45,7 +47,7 @@ const createWindow = async () => {
     mainWindow?.show();
 
     if (import.meta.env.MODE === 'development') {
-      mainWindow?.webContents.openDevTools();
+      // mainWindow?.webContents.openDevTools();
     }
   });
 

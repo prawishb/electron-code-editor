@@ -16,7 +16,7 @@
     "lint": "eslint . --ext js,ts,vue",
     "typecheck-main": "tsc --noEmit -p packages/main/tsconfig.json",
     "typecheck-preload": "tsc --noEmit -p packages/preload/tsconfig.json",
-    "typecheck-renderer": "vue-tsc --noEmit -p packages/renderer/tsconfig.json",
+    "typecheck-renderer": "tsc --noEmit -p packages/renderer/tsconfig.json",
     "typecheck": "npm run typecheck-main && npm run typecheck-preload && npm run typecheck-renderer"
   },
   "browserslist": [
@@ -33,13 +33,13 @@
     "@types/electron-devtools-installer": "2.2.0",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/eslint-plugin": "4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "cross-env": "7.0.3",
     "electron": "15.0.0",
     "electron-builder": "22.11.7",
     "electron-devtools-installer": "3.2.0",
-    "eslint": "^7.32.0",
+    "eslint": "7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "lint-staged": "11.1.2",
     "playwright": "1.15.0",
@@ -48,6 +48,15 @@
     "vite": "2.5.10"
   },
   "dependencies": {
+    "@codemirror/commands": "^0.19.5",
+    "@codemirror/gutter": "^0.19.2",
+    "@codemirror/highlight": "^0.19.6",
+    "@codemirror/history": "^0.19.0",
+    "@codemirror/language": "^0.19.3",
+    "@codemirror/matchbrackets": "^0.19.2",
+    "@codemirror/state": "^0.19.2",
+    "@codemirror/theme-one-dark": "^0.19.0",
+    "@codemirror/view": "^0.19.8",
     "electron-updater": "4.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
